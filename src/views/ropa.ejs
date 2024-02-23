@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="demo-page">
+    <div data-role="header">
+        <h1>Ropa</h1>
+        <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" style="background-color: rgb(185, 157, 210);">Menu</a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <div class="article">
+            <div style="text-align: center;">
+                <img src="https://cdn-icons-png.flaticon.com/512/614/614723.png" style="width: 190px; margin: 10px;">
+                <img src="https://images.vexels.com/media/users/3/142672/isolated/preview/1a6f2e1fcf08e9606d93bb5a8c941b3a-ropa-de-camiseta-de-trazo-verde.png" style="width: 190px; margin: 10px;">
+                <img src="https://cdn-icons-png.flaticon.com/512/925/925072.png" style="width: 190px; margin: 10px;">
+            </div>
+            
+            <form>
+                <input data-type="search" id="searchForCollapsibleSet">
+            </form>
+            <div data-role="collapsibleset" data-filter="true" data-inset="true" id="collapsiblesetForFilter" data-input="#searchForCollapsibleSet">
+                <% products.forEach((product) => { %>
+                    <div data-role="collapsible" data-filtertext="<%= product.category%>">
+                        <h3><%= product.category %></h3>
+                        <ul data-role="listview" data-inset="false">
+                            <li>Código de producto: <%= product.productCode %></li>
+                            <li>Marca: <%= product.brand %></li>
+                            <li>Categoría: <%= product.category %></li>
+                            <li>Talla: <%= product.size %></li>
+                            <li>Color: <%= product.color %></li>
+                            <li>Precio: <%= product.price %></li>
+                            <li>Stock: <%= product.stock %></li>
+                            <li>Fecha de fabricación: <%= product.manufacturingDate %></li>
+                            <li>Estatus: <%= product.status %></li>
+                            <button><a style="text-decoration: none; color: black;" href="/<%= product.productCode %>">Editar</a></button>    
+                            <button><a style="text-decoration: none; color: black;" href="/deleteOne/<%= product.productCode %>">Eliminar</a></button>
+                        </ul>
+                    </div>
+                <% }) %>
+            </div>
+        </div><!-- /article -->
+    </div><!-- /content -->
+
+    <div data-role="panel" id="left-panel" style="background-color: blueviolet;">
+        <ul data-role="listview"><br>
+            <li><a href="/">Inicio</a></li><br>
+            <li><a href="/ropa/vista">Ropa</a></li><br>
+            <li><a href="/ropa/agregar">Agregar ropa</a></li><br>
+            <li data-icon="delete"><a href="#" data-rel="close">Cerrar</a></li>
+        </ul>
+    </div><br><!-- /panel -->
+    
+    <div data-role="footer" id="demo-footer" >
+        <h1>Developed for Berenice</h1>
+    </div>
+</div><!-- /page -->
+
+
+</body>
+</html>

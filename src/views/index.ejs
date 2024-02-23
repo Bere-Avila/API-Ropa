@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Title</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<style>
+    body {
+        background-color: #8e61d1; /* Color de fondo para toda la página */
+    }
+    .ui-content {
+        background-color: rgb(201, 124, 198); /* Color de fondo para el contenido */
+        padding: 20px; /* Espacio alrededor del contenido */
+    }
+</style>
+
+<div data-role="page" id="demo-page" >
+    <div data-role="header" >
+        <h1 >Inicio</h1>
+        <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false"  style="background-color: rgb(185, 157, 210);">Menu</a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <div class="article">
+            <h1 style="text-align: center;">Bienvenidos a nuestra tienda online.</h1>
+            <div style="text-align: center;">
+            <p><img src="https://cdn-icons-png.flaticon.com/512/5432/5432703.png" ></p>
+            </div> 
+            <h2>Somos tu destino principal para descubrir las últimas colecciones, encontrar prendas únicas y expresar tu estilo personal a través de la ropa que amas.</h2>
+            <h2>Explora nuestra tienda online, donde la moda se encuentra con la comodidad. Desde prendas elegantes hasta looks casuales, ofrecemos una amplia gama de opciones para que puedas descubrir piezas que reflejen tu individualidad.</h2>
+            <h2>Cada artículo que presentamos ha sido cuidadosamente seleccionado para garantizar calidad, estilo y una experiencia de compra sin igual.</h2>
+        </div><!-- /article -->
+    </div><!-- /content -->
+
+    <div data-role="panel" id="left-panel" style="background-color: blueviolet;">
+        <ul data-role="listview"><br>
+            <li><a href="/">Inicio</a></li><br>
+            <li><a href="/ropa/vista">Ropa</a></li><br>
+            <li><a href="/ropa/agregar">Agregar ropa</a></li><br>
+            <li data-icon="delete"><a href="#" data-rel="close">Cerrar</a></li>
+        </ul>
+    </div><br><!-- /panel -->
+    
+    <div data-role="footer" id="demo-footer" style="margin-top: 80;">
+        <h1>Developed for Berenice</h1>
+    </div>
+</div><!-- /page -->
+
+
+</body>
+</html>

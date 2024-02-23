@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body >
+<div data-role="page" id="demo-page">
+    <div data-role="header">
+        <h1>Editar</h1>
+        <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" style="background-color: rgb(185, 157, 210);">Menu</a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content" >
+        <div class="article">
+            <form action="/<%= product.productCode %>" method="post">
+                <div data-role="fieldcontain">
+                    <label>Codigo de barras:</label>
+                    <input type="text" name="productCode" id="txt_barcode" value="<%= product.productCode %>" required>
+                </div>
+                <div data-role="fieldcontain">
+                    <label>Marca:</label>
+                    <input type="text" name="brand" id="txt_brand" value="<%= product.brand %>">
+                </div>
+                <div data-role="fieldcontain">
+                    <label>Categoría:</label>
+                    <input type="text" name="category" id="txt_category" value="<%= product.category %>">
+                </div>
+                <div data-role="fieldcontain">
+                    <label>Tamaño:</label>
+                    <input type="text" name="size" id="txt_size" value="<%= product.size %>">
+                </div>
+                <div data-role="fieldcontain">
+                    <label>Color:</label>
+                    <input type="text" name="color" id="txt_color" value="<%= product.color %>">
+                </div>
+                <div data-role="fieldcontain">
+                    <label>Precio:</label>
+                    <input type="number" name="price" id="txt_price" value="<%= product.price %>" required>
+                </div>
+                <div data-role="fieldcontain">
+                    <label>Existencias:</label>
+                    <input type="number" name="stock" id="txt_stock" value="<%= product.stock %>" required>
+                </div>
+                <div data-role="fieldcontain">
+                    <label>Fecha de fabricación:</label>
+                    <input type="text" name="manufacturingDate" id="txt_manufacturing_date" value="<%= product.manufacturingDate %>">
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="flip-2">Activo:</label>
+                    <select name="status" id="flip-2" data-role="slider">
+                        <option value="0" <%= product.status === 0 ? "selected" : "" %>>No</option>
+                        <option value="1" <%= product.status === 1 ? "selected" : "" %>>Sí</option>
+                    </select>
+                </div>
+            
+                <button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini" >Guardar</button>
+            </form>            
+        </div><!-- /article -->
+    </div><!-- /content -->
+
+    <div data-role="panel" id="left-panel" style="background-color: blueviolet;">
+        <ul data-role="listview"><br>
+            <li><a href="/">Inicio</a></li><br>
+            <li><a href="/ropa/vista">Ropa</a></li><br>
+            <li><a href="/ropa/agregar">Agregar ropa</a></li><br>
+            <li data-icon="delete"><a href="#" data-rel="close">Cerrar</a></li>
+        </ul>
+    </div><br><!-- /panel -->
+    
+    <div data-role="footer" id="demo-footer">
+        <h1>Developed for Berenice</h1>
+    </div>
+</div><!-- /page -->
+
+
+</body>
+</html>

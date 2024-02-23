@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="demo-page" data-url="demo-page">
+    <div data-role="header">
+        <h1>Agregar Ropa</h1>
+        <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" style="background-color: rgb(185, 157, 210);">Menu</a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <div class="article">
+
+            <div style="text-align: center;">
+                <img src=https://cdn-icons-png.flaticon.com/256/4117/4117262.png style="width: 190px; margin: 10px;">
+                <img src=https://cdn-icons-png.flaticon.com/256/5208/5208370.png style="width: 190px; margin: 10px;">
+                <img src=https://cdn-icons-png.flaticon.com/256/5853/5853911.png style="width: 190px; margin: 10px;">
+            </div>
+
+
+            <form action="/" method="POST">
+                <div data-role="fieldcontain">
+                    <input type="text" name="productCode" id="txt_barcode" placeholder="Codigo de barras" required>
+                </div>
+                <div data-role="fieldcontain">
+                    <input type="text" name="brand" id="txt_brand" placeholder="Marca">
+                </div>
+                <div data-role="fieldcontain">
+                    <input type="text" name="category" id="txt_category" placeholder="Categoría">
+                </div>
+                <div data-role="fieldcontain">
+                    <input type="text" name="size" id="txt_size" placeholder="Tamaño">
+                </div>
+                <div data-role="fieldcontain">
+                    <input type="text" name="color" id="txt_color" placeholder="Color">
+                </div>
+                <div data-role="fieldcontain">
+                    <input type="number" name="price" id="txt_price" placeholder="Precio" required>
+                </div>
+                <div data-role="fieldcontain">
+                    <input type="number" name="stock" id="txt_stock" placeholder="Existencias" required>
+                </div>
+                <div data-role="fieldcontain">
+                    <input type="text" name="manufacturingDate" id="txt_manufacturing_date" placeholder="Fecha de fabricación">
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="flip-2">Activo</label>
+                    <select name="status" id="flip-2" data-role="slider">
+                        <option value="0">No</option>
+                        <option value="1">Sí</option>
+                    </select>
+                </div>
+            
+                <button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini">Guardar</button>
+            </form>
+            
+        </div><!-- /article -->
+    </div><!-- /content -->
+
+    <div data-role="panel" id="left-panel" style="background-color: blueviolet;">
+        <ul data-role="listview"><br>
+            <li><a href="/">Inicio</a></li><br>
+            <li><a href="/ropa/vista">Ropa</a></li><br>
+            <li><a href="/ropa/agregar">Agregar ropa</a></li><br>
+            <li data-icon="delete"><a href="#" data-rel="close">Cerrar</a></li>
+        </ul>
+    </div><br><!-- /panel -->
+    
+    <div data-role="footer" id="demo-footer">
+        <h1>Developed for Berenice</h1>
+    </div>
+</div><!-- /page -->
+
+
+</body>
+</html>
